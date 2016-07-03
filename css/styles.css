@@ -1,0 +1,106 @@
+body {
+  background-color: grey;
+}
+
+.navbar p {
+  display: inline-block;
+}
+
+.navbar {
+  background-color: #FFB4B0;
+  margin: 20px;
+}
+
+.artistSelect {
+  background-color: #4DD7FA;
+  float: left;
+  margin-right: 20px;
+}
+
+.artistSelect select {
+  display: block;
+  margin: 20px 0;
+}
+
+#moreButton {
+  display: inline;
+  float: right;
+}
+
+#addArtist {
+  margin: 20px;
+  background-color: chartreuse;
+}
+
+.addArtist {
+  background-color: #green;
+  display: inline-block;
+  /*margin-left: 20px;*/
+  /*float: left;*/
+  /*margin: auto;*/
+}
+
+.visibility {
+  display: none;
+}
+
+.artist {
+  /* width: 500px; */
+  margin: 20px;
+}
+
+/*
+.radioButtonAlign input {
+
+  display: inline-block;
+  float: left;
+}
+*/
+
+.radioButtonColumnOne {
+    height: 100%;
+    width: 50%;
+    float: left;
+    margin-left: -2px
+}
+
+.radioButtonColumnTwo {
+    height: 100%;
+    width: 50%;
+    float: left;
+    /* margin-right: -2px */
+}
+
+
+
+.radioButtonColumnOne label {
+  display: block;
+}
+
+.radioButtonColumnTwo label {
+  display: block;
+}
+
+
+.song {
+  background-color: #FEFAC0;
+  min-width: 350px;
+  margin: 0 20px; 
+  float: center;
+}
+
+
+
+.song h3 {
+  color: #785616;
+}
+
+.song p {
+  color:grey;
+}
+
+fieldset {
+  border-width: 4px;
+  /* border-style: double; */
+  border-color: white;
+}

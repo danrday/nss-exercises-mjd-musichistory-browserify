@@ -1,0 +1,160 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Music History</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <fieldset class="navbar">
+      <a href="#">View music</a>
+      <p> | </p>
+      <a href="#">List Music</a>
+      <p> | </p>
+      <a href="#" id="elAddMusic">Add Music</a>
+      <p> | </p>
+      <a href="#">Profile</a>
+    </fieldset>
+
+    <div id="addArtist" class="addArtist, visibility">
+        Artist: <input type="text" name="Artist" id="newArtist">
+        Song: <input type="text" name="Song" id="newSong">
+        Album: <input type="text" name="Album" id="newAlbum">
+        <input type="button" value="Add" id="addArtistButton">
+
+      <div id="userOutput">
+
+        <div id="artistOutput">
+          <p>Artist Output</p>
+        </div>
+
+        <div id="songOutput">
+          <p>Song Output</p>
+        </div>
+
+        <div id="albumOutput">
+          <p>Album Output</p>
+        </div>
+
+      </div>
+
+    </div>
+
+<!-- left side select options -->
+    <div class="artist" id="artistSelect">
+    <fieldset class="artistSelect">
+
+    <!-- Range Slider !-->
+      <p>Song length:</p>
+      <input id="songLength" type="range"/>
+
+  <!-- Artists !-->
+
+      <select id="selectArtist">
+        <option disabled selected>Select an artist.</option>
+        <option>Prince</option>
+        <option>Ol' Dirty Bastard</option>
+        <option>Mozart</option>
+        <option>Beethoven</option>
+        <option>Brahms</option>
+      </select>
+
+  <!-- Artist Albums !-->
+
+      <select id = "selectAlbum">
+        <option disabled selected>Albums by Prince</option>
+        <option>For You</option>
+        <option>Prince</option>
+        <option>Dirty Mind</option>
+        <option>Controversy</option>
+        <option>1999</option>
+      </select>
+
+      <select>
+        <option disabled selected>Albums by Ol' Dirty Bastard</option>
+        <option>For You</option>
+        <option>Prince</option>
+        <option>Dirty Mind</option>
+        <option>Controversy</option>
+        <option>1999</option>
+      </select>
+
+      <select>
+        <option disabled selected>Albums by Ol' Dirty Bastard</option>
+        <option>For You</option>
+        <option>Prince</option>
+        <option>Dirty Mind</option>
+        <option>Controversy</option>
+        <option>1999</option>
+      </select>
+
+          <select>
+        <option disabled selected>Albums by Ol' Dirty Bastard</option>
+        <option>For You</option>
+        <option>Prince</option>
+        <option>Dirty Mind</option>
+        <option>Controversy</option>
+        <option>1999</option>
+      </select>
+
+          <select>
+        <option disabled selected>Albums by Ol' Dirty Bastard</option>
+        <option>For You</option>
+        <option>Prince</option>
+        <option>Dirty Mind</option>
+        <option>Controversy</option>
+        <option>1999</option>
+      </select>
+
+      <!-- Genre buttons !-->
+
+   
+
+      <p>Select a genre:</p>
+
+      <div class="radioButtonColumnOne">
+        <label>
+          <input type="radio" name="Rock" value="Rock">
+          Rock
+        </label>
+        <label>
+        <input type="radio" name="Pop" value="Pop">
+        Pop</label>
+        <label>
+        <input type="radio" name="Blues" value="Blues">
+        Blues</label>
+      </div>
+
+      <div class="radioButtonColumnTwo">
+        <label>
+        <input type="radio" name="Classical" value="Classical">
+        Classical</label>
+        <label>
+        <input type="radio" name="Jazz" value="Jazz">
+        Jazz</label>
+        <label>
+        <input type="radio" name="Hip-hop" value="Hip-hop">
+        Hip Hop</label>
+      </div>
+
+    </fieldset>
+    </div>
+
+    <div>
+    <fieldset class="song" id="listSongs">
+      <h3>Song Name</h3><p>Artist name | Album name</p>
+      <h3>Song Name</h3><p>Artist name | Album name</p>
+      <h3>Song Name</h3><p>Artist name | Album name</p>
+      <h3>Song Name</h3><p>Artist name | Album name</p>
+     </fieldset>
+     <input type="button" id="moreButton" class="song" value="more"></input>
+     </div>
+
+    
+<script  src="https://code.jquery.com/jquery-3.0.0.min.js"  integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="crossorigin="anonymous"></script>
+<script src="dist/bundle.js"></script>
+</body>
+</html>
