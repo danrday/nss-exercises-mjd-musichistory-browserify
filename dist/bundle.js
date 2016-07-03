@@ -2,7 +2,7 @@
 "use strict";
 
 let musicProgram = require("./musicHistoryModule");
-let addDeleteButtons = require("./domFunctions");
+let addDeleteButtons = require("./domFunctions").addDeleteButtons;
 
 //main nav button to add new music
 var $elAddMusic = $("#elAddMusic");
@@ -191,6 +191,8 @@ module.exports = {addMoreSongsButton, addNewMusic};
 let musicProgram = require("./musicHistoryModule");
 let $selectArtist = $("#selectArtist");
 let $selectAlbum = $("#selectAlbum");
+let addDeleteButtons = require("./domFunctions").addDeleteButtons;
+
 
 $selectAlbum.click(selectAlbum);
 
@@ -206,8 +208,8 @@ $selectArtist.change(selectArtist);
 let filterResultsByArtist = [];
 
 function selectArtist() {
+  filterResultsByArtist = [];
   let selectedArtist = $selectArtist.val();
-  
   for (var x in musicProgram.songData) {
     console.log("array data", musicProgram.songData[x].Artist);
     console.log("selected artist", selectedArtist);
@@ -217,7 +219,30 @@ function selectArtist() {
       console.log("filter results by artist", filterResultsByArtist);
     }
   }
+  musicProgram.songPrint(filterResultsByArtist);
+  filterDeleteButtons();
 }
+
+//waits for document to be ready and then adds delete buttons
+let filterDeleteButtons = function() {
+   $(document).ready(function() {
+  let $elDeleteMusic = $(".deleteButton");
+  $elDeleteMusic.click(deleteFilteredItem);
+  });
+};
+
+
+//locates which div you clicked on to delete
+let deleteFilteredItem = function () {
+  var elToDelete = event.target.closest("div");
+  var idToDelete = elToDelete.id.split("--")[1];
+  musicProgram.songData.splice(idToDelete, 1);
+  filterResultsByArtist.splice(idToDelete, 1)
+  musicProgram.songPrint(filterResultsByArtist);
+
+  filterDeleteButtons();
+};
+ 
 
 function populateArtistList(callback) {
   console.log("HELLO");
@@ -277,7 +302,7 @@ function populateArtistList(callback) {
 
 
 module.exports = populateArtistList;
-},{"./musicHistoryModule":7}],7:[function(require,module,exports){
+},{"./domFunctions":2,"./musicHistoryModule":7}],7:[function(require,module,exports){
 "use strict";
 
 const songPrint = require("./songPrint");

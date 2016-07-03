@@ -1,7 +1,7 @@
 "use strict";
 
 let musicProgram = require("./musicHistoryModule");
-let addDeleteButtons = require("./domFunctions");
+let addDeleteButtons = require("./domFunctions").addDeleteButtons;
 
 //main nav button to add new music
 var $elAddMusic = $("#elAddMusic");
